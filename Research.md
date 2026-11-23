@@ -2,10 +2,6 @@
 
 > A research timeline of pivotal ideas, technologies, systems, and breakthroughs in artificial intelligence, from early computational models to modern generative AI and large language models.
 
-## Overview
-
-This timeline contains **31 milestones**, spanning **1943–2024**. It covers AI foundations, symbolic AI, machine learning, neural networks, deep learning, computer vision, natural language processing, reinforcement learning, generative AI, large language models, and AI for science.
-
 ## Historical timeline
 
 | Year | Milestone | Subfield | Significance |
@@ -53,52 +49,6 @@ This timeline contains **31 milestones**, spanning **1943–2024**. It covers AI
 
 These areas overlap rather than replace one another. For example, modern generative AI often uses deep learning; many LLMs are Transformer-based; and reinforcement learning can be used to refine model behavior.
 
-## Sources and further reading
-
-| Source | Type | Verification note |
-|---|---|---|
-| [Dartmouth AI proposal and John McCarthy’s history](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html) | Primary historical document / first-person account | Distinguishes the 1955 proposal from the 1956 workshop. |
-| [Alan Turing, Computing Machinery and Intelligence (1950)](https://doi.org/10.1093/mind/LIX.236.433) | Primary scholarly paper | Original imitation-game article. |
-| [McCulloch & Pitts (1943)](https://doi.org/10.1007/BF02478259) | Primary scholarly paper | Early formal neuron model. |
-| [Rumelhart, Hinton & Williams (1986)](https://doi.org/10.1038/323533a0) | Primary scholarly paper | Backpropagation and distributed representations. |
-| [LeCun et al. (1989)](https://doi.org/10.1162/neco.1989.1.4.541) | Primary scholarly paper | Convolutional networks for handwritten digit recognition. |
-| [Krizhevsky, Sutskever & Hinton (2012)](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) | Primary conference paper | AlexNet / ImageNet breakthrough. |
-| [Goodfellow et al. (2014)](https://papers.nips.cc/paper/5423-generative-adversarial-nets) | Primary conference paper | Original GAN paper. |
-| [Silver et al. (2016)](https://doi.org/10.1038/nature16961) | Primary scholarly paper | AlphaGo and combined deep learning/search. |
-| [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) | Primary conference paper | Transformer architecture. |
-| [Brown et al. (2020)](https://arxiv.org/abs/2005.14165) | Primary conference paper | GPT-3 and few-shot learning. |
-| [OpenAI ChatGPT launch (2022)](https://openai.com/index/chatgpt/) | Official announcement | Launch date and system framing. |
-| [OpenAI GPT-4 technical report (2023)](https://arxiv.org/abs/2303.08774) | Primary technical report | Capabilities and limitations of GPT-4. |
-| [Jumper et al. (2021)](https://doi.org/10.1038/s41586-021-03819-2) | Primary scholarly paper | AlphaFold 2; note CASP14 results were in 2020. |
-| [Abramson et al. (2024)](https://doi.org/10.1038/s41586-024-07487-w) | Primary scholarly paper | AlphaFold 3. |
-| [Lighthill report (1973)](https://www.chilton-computing.org.uk/inf/literature/reports/lighthill_report/) | Government research report | Historical context for UK AI funding cuts. |
-
 ## Research notes
 
-### Scope
-
-A selective global timeline of foundational AI ideas, influential systems, major machine-learning methods, generative AI, LLMs and AI for science. It is not an exhaustive list of every contribution.
-
-### Date convention
-
-Year refers to the event, first public introduction, preprint, or competition result as indicated in the source/date note. A paper's publication year can differ from the first announcement or event year.
-
-### Terminology
-
-AI is the broad field. Machine learning is a subfield in which systems learn patterns from data or interaction. Deep learning uses multilayer neural networks. Generative AI creates new content. Large language models (LLMs) are large neural language models, commonly Transformer-based, trained on text and sometimes other modalities.
-
-### Historical caution
-
-The timeline avoids treating any single event as the sole cause of an AI winter or as the invention of an entire field. Dates sometimes refer to an early demonstration, with a later peer-reviewed publication noted separately.
-
-### Research limitation
-
-This document was compiled from established primary papers, official research announcements and historical sources. Live web browsing was not available in this session, so links are supplied for independent verification rather than represented as freshly checked during this session.
-
-## Notes on historical dates
-
-Some milestones have more than one relevant date: an idea may have been demonstrated or announced before its peer-reviewed paper appeared. Where this matters, the timeline records the event or first-publication year and explains the distinction in the source/date note. For example, the Dartmouth proposal was written in 1955 and the workshop took place in 1956; AlphaFold 2's CASP14 result was announced in 2020 and its major journal paper appeared in 2021.
-
----
-
-*Prepared as a concise research reference. The timeline is selective, not an exhaustive history of every contributor or AI system.*
+AI has developed over many decades through research, experiments, successes, and failures. Its progress was not always smooth, but each breakthrough helped build today's AI tools. This shows that modern AI is the result of years of learning and improvement, not a sudden invention.

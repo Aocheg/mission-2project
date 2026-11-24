@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-view="mock">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI Timeline Pyramid: Tier 2 design</title>
+<meta name="description" content="Working design for the AI Timeline Pyramid: layers, event placement, connecting lines, layout grid and clickable detail cards, with a wireframe view and annotations.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3 30 29H2z' fill='%232f5173'/%3E%3Cpath d='M16 3 23 16H9z' fill='%238fb3d1'/%3E%3C/svg%3E">
+<script>
+  /* Runs before first paint: marks JS as available and applies the saved or system theme (no flash). */
+  (function () {
+    var r = document.documentElement;
+    r.className = r.className.replace('no-js', 'js');
+    var t = null;
+    try { t = localStorage.getItem('ai-pyramid-theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    r.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#pyramid">Skip to the pyramid</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1 data-ann="1">The AI Timeline Pyramid</h1>
+    <p class="intro">Artificial intelligence did not appear overnight. It grew from ancient questions about thinking machines, through the rule-based programs of the 1950s to the 1980s and two winters of lost funding, to the data-driven revolution in machine learning and, finally, the generative models and large language models that many people now use every day. This pyramid stacks that story in layers: the wide base is the groundwork, each narrower layer is a more specialised and more capable stage, and the apex looks at what comes next. Select any event to see what happened, why it mattered and how it changed industry and daily life.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="app-error" class="alert" role="alert" hidden></div>
+
+  <noscript>
+    <div class="alert alert-info">
+      <p>The interactive pyramid needs JavaScript. The events, oldest first, are listed below so you can still read everything.</p>
+    </div>
+    <ol>
+<li><h3>Before 1950: Mythical and mechanical roots of thinking machines</h3><p><strong>What happened.</strong> Long before computers, myths such as the Greek bronze guardian Talos and later clockwork automata imagined artificial beings, while philosophers tried to describe reasoning as a set of rules.</p><p><strong>Why it matters.</strong> These ideas posed the central question of the field: if reasoning can be described precisely, can a machine carry it out?</p><p><strong>Subfield.</strong> Foundations</p><p><strong>Impact.</strong> In daily life they still shape how books, films and news picture AI. In industry and policy they colour debates about how human-like machines should be allowed to look, sound and behave.</p></li>
+<li><h3>1950: Turing proposes the Turing Test</h3><p><strong>What happened.</strong> Alan Turing published &#x27;Computing Machinery and Intelligence&#x27; and proposed the imitation game, now called the Turing Test: if a person cannot reliably tell a machine&#x27;s written answers from a human&#x27;s, the machine can be said to behave intelligently.</p><p><strong>Why it matters.</strong> It turned &#x27;can machines think?&#x27; into a question that could be tested, and it gave the field a practical yardstick based on behaviour rather than philosophy.</p><p><strong>Subfield.</strong> Foundations</p><p><strong>Impact.</strong> The idea still frames how people judge chatbots and assistants. It also lives on in everyday web security: CAPTCHA, the puzzle that asks you to prove you are human, is named after the test.</p></li>
+<li><h3>1956: Dartmouth workshop names &#x27;artificial intelligence&#x27;</h3><p><strong>What happened.</strong> In the summer of 1956 researchers including John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon met at Dartmouth College for a workshop on making machines simulate learning and intelligence. McCarthy introduced the term &#x27;artificial intelligence&#x27; in the proposal for it.</p><p><strong>Why it matters.</strong> A shared name and a shared agenda turned scattered experiments into one research field, and the group&#x27;s ideas set the research agenda for decades.</p><p><strong>Subfield.</strong> Foundations</p><p><strong>Impact.</strong> The labs, university courses and funding programmes that grew from it produced the technology behind search engines, voice assistants and automation. Today &#x27;AI&#x27; is a standard budget line in almost every large company.</p></li>
+<li><h3>1956: The Logic Theorist proves mathematical theorems</h3><p><strong>What happened.</strong> Allen Newell, Herbert Simon and Cliff Shaw built the Logic Theorist, which proved 38 of the first 52 theorems in Whitehead and Russell&#x27;s Principia Mathematica and found a more elegant proof for one of them than the published version.</p><p><strong>Why it matters.</strong> It demonstrated symbolic reasoning: manipulating symbols and rules to solve problems, which became the dominant approach to AI for the next three decades.</p><p><strong>Subfield.</strong> Symbolic AI</p><p><strong>Impact.</strong> Its descendants are automated theorem provers and formal verification tools, used by chip makers and software companies to prove that hardware and critical code behave correctly.</p></li>
+<li><h3>1966: ELIZA, the first chatbot</h3><p><strong>What happened.</strong> Joseph Weizenbaum at MIT created ELIZA. Its best-known script, DOCTOR, imitated a psychotherapist by spotting keywords and turning the user&#x27;s own words back as questions.</p><p><strong>Why it matters.</strong> It showed that conversation could be simulated with very simple rules, and that people project understanding onto software. Weizenbaum was alarmed by how attached some users became, and this &#x27;ELIZA effect&#x27; is still studied.</p><p><strong>Subfield.</strong> Natural Language Processing</p><p><strong>Impact.</strong> ELIZA is the ancestor of customer-service chatbots and virtual assistants. Its lesson, that fluent language is not the same as understanding, matters more than ever with today&#x27;s convincing chatbots.</p></li>
+<li><h3>1980s: Expert systems go commercial</h3><p><strong>What happened.</strong> Expert systems captured the know-how of human specialists as if-then rules. The best-known, R1 (also called XCON), configured computer orders for Digital Equipment Corporation and reportedly saved the company about $25 million a year by 1982.</p><p><strong>Why it matters.</strong> They proved AI could deliver business value, which triggered the first commercial AI boom. Their weaknesses, costly knowledge gathering and brittleness outside their narrow domain, helped lead to the next AI winter.</p><p><strong>Subfield.</strong> Symbolic AI</p><p><strong>Impact.</strong> Rule engines descended from expert systems still run decisions in insurance underwriting, tax software, loan approval and manufacturing configuration.</p></li>
+<li><h3>1986: Backpropagation makes multi-layer networks trainable</h3><p><strong>What happened.</strong> David Rumelhart, Geoffrey Hinton and Ronald Williams published &#x27;Learning representations by back-propagating errors&#x27; in Nature. It popularised backpropagation, a method that passes errors backwards through a network so every layer&#x27;s weights can be adjusted.</p><p><strong>Why it matters.</strong> It solved the training problem that had stalled neural networks after the perceptron&#x27;s limits were exposed, and it is still the core training method of deep learning.</p><p><strong>Subfield.</strong> Neural Networks</p><p><strong>Impact.</strong> Early applications, such as Yann LeCun&#x27;s handwritten-digit networks, were used in the 1990s to read postal codes and bank cheques automatically, an early sign of machine learning in everyday services.</p></li>
+<li><h3>1980s–1990s: The AI winters</h3><p><strong>What happened.</strong> Twice, enthusiasm and funding for AI collapsed after early promises went unmet: first in the mid-1970s, and again from the late 1980s into the early 1990s, when the market for expert systems and specialised AI hardware crashed.</p><p><strong>Why it matters.</strong> The winters forced researchers toward measurable, data-driven methods and more realistic claims, setting the stage for machine learning to take over.</p><p><strong>Subfield.</strong> Field History</p><p><strong>Impact.</strong> They remain the standard warning for investors, companies and governments about overpromising. Debates today about an &#x27;AI bubble&#x27; echo the same pattern.</p></li>
+<li><h3>1997: Deep Blue defeats Kasparov</h3><p><strong>What happened.</strong> In May 1997 IBM&#x27;s Deep Blue beat world chess champion Garry Kasparov 3.5 to 2.5 in a six-game rematch, searching around 200 million positions per second using custom hardware and hand-tuned evaluation rules.</p><p><strong>Why it matters.</strong> It showed that fast search plus expert knowledge could beat the best human at a game long seen as a mark of intelligence. It did this by brute force rather than by learning.</p><p><strong>Subfield.</strong> Game AI / Search</p><p><strong>Impact.</strong> The match changed public attitudes to what machines could do. The search and planning ideas behind it appear in route planning, scheduling and logistics software.</p></li>
+<li><h3>2004–2007: DARPA challenges drive autonomous vehicles</h3><p><strong>What happened.</strong> DARPA&#x27;s 2004 Grand Challenge sent driverless vehicles across the Mojave Desert and none finished. In 2005 five did, with Stanford&#x27;s Stanley winning. The 2007 Urban Challenge moved the contest to a mock city with traffic, won by Carnegie Mellon&#x27;s Boss.</p><p><strong>Why it matters.</strong> They showed how quickly machine learning, sensors and software could solve a hard real-world problem when the goal and the prize were clear.</p><p><strong>Subfield.</strong> Robotics / Machine Learning</p><p><strong>Impact.</strong> Alumni of these teams helped start the self-driving programmes at major technology companies. Their work lives on in driver-assistance features such as adaptive cruise control and lane keeping, and in robotaxi services.</p></li>
+<li><h3>2006–2009: The Netflix Prize</h3><p><strong>What happened.</strong> Netflix released a large set of anonymised movie ratings and offered $1 million to any team that could improve its recommendation accuracy by 10 percent. Thousands of teams competed, and the prize was won in 2009 by a team of merged rivals.</p><p><strong>Why it matters.</strong> It proved the value of open competitions, large datasets and ensembles of models, and it popularised collaborative filtering.</p><p><strong>Subfield.</strong> Machine Learning</p><p><strong>Impact.</strong> Recommendation engines now shape what people watch, buy, read and listen to on streaming, shopping and music services.</p></li>
+<li><h3>2009: ImageNet is introduced</h3><p><strong>What happened.</strong> Fei-Fei Li and colleagues presented ImageNet, a database that grew to millions of images sorted into thousands of everyday categories. It later powered an annual image-recognition contest.</p><p><strong>Why it matters.</strong> It established that data at scale can matter as much as clever algorithms, and it gave researchers a common benchmark to compare progress.</p><p><strong>Subfield.</strong> Computer Vision / Data</p><p><strong>Impact.</strong> Models pretrained on ImageNet-style data underpin photo search, medical image analysis, retail visual search and the camera features in modern phones.</p></li>
+<li><h3>2010s: The deep learning revolution</h3><p><strong>What happened.</strong> In the early 2010s, large datasets and powerful graphics processors made it practical to train deep neural networks. Convolutional neural networks (CNNs) began to excel at recognising images.</p><p><strong>Why it matters.</strong> It ended decades in which hand-built features dominated. Instead, networks learned useful features directly from data.</p><p><strong>Subfield.</strong> Deep Learning</p><p><strong>Impact.</strong> Within a few years, speech recognition, photo tagging, face unlock and machine translation on everyday devices improved dramatically, and industries from healthcare imaging to agriculture adopted vision models.</p></li>
+<li><h3>2011: Watson wins at Jeopardy!</h3><p><strong>What happened.</strong> In February 2011 IBM&#x27;s Watson defeated Ken Jennings and Brad Rutter on the quiz show Jeopardy!, answering natural-language clues by searching and weighing evidence from millions of documents.</p><p><strong>Why it matters.</strong> It was a major demonstration of question answering and of combining many language-processing techniques in one system.</p><p><strong>Subfield.</strong> Natural Language Processing</p><p><strong>Impact.</strong> It brought question-answering AI to a mass audience and spurred enterprise search and decision-support tools. IBM&#x27;s later push into healthcare proved harder than the quiz show, a reminder that demos do not always transfer to messy real settings.</p></li>
+<li><h3>2014: Generative adversarial networks (GANs)</h3><p><strong>What happened.</strong> Ian Goodfellow and colleagues introduced GANs: a generator creates fake examples while a discriminator tries to spot them, and each improves by competing with the other.</p><p><strong>Why it matters.</strong> GANs showed that neural networks could create new, realistic content rather than only classify existing data, opening the field of modern generative AI.</p><p><strong>Subfield.</strong> Generative AI</p><p><strong>Impact.</strong> They enabled realistic image synthesis, photo enhancement and synthetic training data for industry. They also made deepfakes possible, raising new problems for media trust and online safety.</p></li>
+<li><h3>2017: The Transformer architecture</h3><p><strong>What happened.</strong> Researchers at Google published &#x27;Attention Is All You Need&#x27;, introducing the Transformer, a network design built on an attention mechanism that lets a model weigh the most relevant words in a sentence at once.</p><p><strong>Why it matters.</strong> Attention made models far better at understanding context and much easier to train in parallel on large amounts of text, which made today&#x27;s very large language models possible.</p><p><strong>Subfield.</strong> LLMs / Deep Learning</p><p><strong>Impact.</strong> Within five years Transformers powered assistants that draft emails, write code, translate languages and summarise documents, reshaping knowledge work across industries.</p></li>
+<li><h3>2022: ChatGPT brings generative AI to the mainstream</h3><p><strong>What happened.</strong> OpenAI released ChatGPT on 30 November 2022. Built on a GPT language model tuned to follow instructions and hold a conversation, it was followed by rivals such as Claude and Gemini that write, translate, summarise and chat.</p><p><strong>Why it matters.</strong> It turned a research technology into an everyday tool almost overnight and made generative AI a topic for everyone, not just specialists.</p><p><strong>Subfield.</strong> Generative AI / LLMs</p><p><strong>Impact.</strong> Writing, coding, customer support, education and research workflows changed within months. Schools, employers and governments are still working out rules for responsible use.</p></li>
+<li><h3>Future: Artificial general intelligence and superintelligence</h3><p><strong>What happened.</strong> Artificial general intelligence (AGI) means a system able to learn and perform most intellectual tasks as well as a person. Superintelligence would go well beyond human ability. Neither exists today.</p><p><strong>Why it matters.</strong> Even as a theoretical goal, AGI shapes research priorities, investment and arguments about AI safety and regulation, and experts disagree sharply about whether and when it could happen.</p><p><strong>Subfield.</strong> Future / Speculative</p><p><strong>Impact.</strong> Industries and governments are already planning for both opportunity and risk, from the future of work to rules on how powerful AI systems are tested and deployed. Daily life may change in ways nobody can yet predict.</p></li>
+</ol>
+  </noscript>
+
+  <section class="designbar js-only" aria-label="Design view controls">
+    <span class="bar-label">Design view</span>
+    <div class="seg" role="group" aria-label="Choose mockup or wireframe">
+      <button id="v-mock" class="seg-btn" type="button" aria-pressed="true">Mockup</button>
+      <button id="v-wire" class="seg-btn" type="button" aria-pressed="false">Wireframe</button>
+    </div>
+    <button id="t-grid" class="btn" type="button" aria-pressed="false">Grid overlay</button>
+    <button id="t-ann" class="btn" type="button" aria-pressed="false">Annotations</button>
+    <button id="t-thread" class="btn" type="button" aria-pressed="false">Connectors</button>
+    <a class="bar-link" href="#plan">Read the design plan</a>
+  </section>
+
+  <aside id="ann-key" class="ann-panel js-only" aria-label="Annotation key">
+    <h2>Annotations</h2>
+    <ol>
+      <li><span class="n">1</span>Title and introduction: frame AI&rsquo;s journey from idea to everyday reality.</li>
+      <li><span class="n">2</span>Search: dims events that do not match. Tiles never move.</li>
+      <li><span class="n">3</span>Theme toggle: light or dark, following the system first.</li>
+      <li><span class="n">4</span>Legend: explains layers and colour coding; each subfield pill also filters.</li>
+      <li><span class="n">5</span>Live status: announces how many events match.</li>
+      <li><span class="n">6</span>Layer: a band whose width shows accumulated groundwork.</li>
+      <li><span class="n">7</span>Event tile: select it to open the detail card. In the wireframe, the dark number is the milestone number from the brief.</li>
+      <li><span class="n">8</span>Axis labels: say what height and width mean.</li>
+      <li><span class="n">9</span>Footer: credits and sources.</li>
+    </ol>
+    <p class="hint">Open any event to see the detail card annotated too. On phones the card rises as a bottom sheet instead of a centred dialog.</p>
+  </aside>
+
+  <section class="tools js-only" aria-label="Find events">
+    <div class="search" data-ann="2">
+      <label for="q">Search events</label>
+      <input id="q" type="search" maxlength="80" autocomplete="off" placeholder="Try transformer, 1997 or vision">
+    </div>
+    <button id="theme" class="btn" type="button" aria-pressed="false" data-ann="3">Dark theme</button>
+  </section>
+
+  <section class="legend js-only" aria-labelledby="legend-h" data-ann="4">
+    <h2 id="legend-h">Legend</h2>
+    <div class="legend-grid">
+      <div>
+        <h3>Layers, from the base up</h3>
+        <ol id="layer-legend" class="layer-legend"></ol>
+      </div>
+      <div>
+        <h3>Subfields</h3>
+        <p class="hint">Each tile carries a coloured edge and its subfield name. Select a subfield to highlight its events.</p>
+        <ul id="field-legend" class="field-legend"></ul>
+        <button id="clear" class="btn btn-quiet" type="button" hidden>Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <p id="status" class="status js-only" role="status" data-ann="5"></p>
+
+  <div id="empty" class="empty" hidden>
+    <p><strong>No events match your search.</strong></p>
+    <p>Try a shorter word, a year such as 2017, or clear the filters to see all events.</p>
+    <button id="empty-clear" class="btn" type="button">Show all events</button>
+  </div>
+
+  <div class="pyramid-wrap js-only">
+    <p class="axis axis-top" data-ann="8">More specialised and more capable</p>
+    <ol id="pyramid" class="pyramid" aria-label="Timeline pyramid, listed from the oldest layer to the newest"></ol>
+    <p class="axis axis-bottom">Accumulated groundwork</p>
+    <svg id="threads" class="threads" aria-hidden="true" focusable="false"></svg>
+  </div>
+
+  <section id="plan" class="plan" aria-labelledby="plan-h">
+    <h2 id="plan-h">Design plan</h2>
+    <p class="plan-lead">The five planning decisions for the pyramid architecture. Each one is applied to the live page above: use the design view controls to see it.</p>
+    <div class="plan-grid">
+
+      <article class="wide">
+        <h3>1. Layers</h3>
+        <p>Six layers, from the base up. The brief suggests five; machine learning and deep learning are split so that no layer holds more than one row of tiles. Layers group events by how the technology gets its ability, so they overlap a little in time.</p>
+        <div class="scroll-x">
+          <table id="plan-layers">
+            <thead><tr><th scope="col">Layer</th><th scope="col">Name</th><th scope="col">Width</th><th scope="col">Events (numbers from the brief)</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <ul>
+          <li><strong>Which layer?</strong> Rules, logic or search: layer 2. Learns from data: layer 3. Deep networks at scale: layer 4. Creates new content: layer 5. Ideas before working machines: layer 1. Speculation: layer 6.</li>
+          <li><strong>Order inside a layer.</strong> Left to right by date. Ranges and eras such as 2004 to 2007 sit at their start year.</li>
+          <li><strong>When a layer is full.</strong> Extra tiles wrap to a second centred row. Width never changes, so adding events never changes the shape.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>2. Visual narrative</h3>
+        <ul>
+          <li><strong>Width is accumulated groundwork.</strong> The base is 100 percent and each layer above is 12 points narrower, down to 40 percent at the apex.</li>
+          <li><strong>Tone is depth.</strong> Fills run from deep slate at the base to pale blue at the apex, like strata of rock.</li>
+          <li><strong>A coloured edge is the subfield.</strong> The subfield name is always printed too, so colour is never the only clue.</li>
+          <li><strong>Time reads upward.</strong> Turn on Connectors to thread every event in date order. The zigzag shows how the layers overlap in time.</li>
+          <li><strong>Events never move.</strong> Search and filters dim tiles, so people keep their sense of the whole shape.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>3. Tooling</h3>
+        <p><strong>Chosen: an interactive HTML page</strong> (this page: HTML, CSS and plain JavaScript, with no framework or build step).</p>
+        <p><strong>Why:</strong> it is the only option on the list that gives full control over the pyramid&rsquo;s shape, real buttons for every event, search and filtering, keyboard and screen-reader access, a layout that adapts to phones, and a free shareable link through GitHub Pages.</p>
+        <ul>
+          <li><strong>Canva:</strong> quick, but the layout is template-bound and detail views are separate pages.</li>
+          <li><strong>Prezi:</strong> zooming hides the overview the pyramid exists to show.</li>
+          <li><strong>Figma:</strong> excellent for sketches, but a prototype is not a real page with keyboard and screen-reader support.</li>
+          <li><strong>Slides with links:</strong> a fallback if nobody can code.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>4. Interactivity</h3>
+        <ul>
+          <li><strong>Select a tile</strong> (click, tap, Enter or Space) to open its detail card with the four-part note.</li>
+          <li><strong>Move between events</strong> with Previous and Next, or the Left and Right arrow keys.</li>
+          <li><strong>Close</strong> with the button, Escape or a tap outside. Focus returns to the tile.</li>
+          <li><strong>Search and subfield pills</strong> dim non-matching tiles and combine with each other.</li>
+          <li><strong>Share a link</strong> such as <code>index.html#m16</code> to open an event directly.</li>
+          <li><strong>Where the detail appears:</strong> a centred card on desktop, a bottom sheet on phones. Turn on Annotations, then open any event, to see each part of the card labelled.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>5. Layout grid</h3>
+        <ul>
+          <li><strong>Desktop:</strong> 12 columns, 24 px gutters, container up to 1120 px. Turn on Grid overlay to see them.</li>
+          <li><strong>Layers:</strong> 16 px padding, 6 px gaps, 14 px corner radius. Widths of 100, 88, 76, 64, 52 and 40 percent.</li>
+          <li><strong>Tiles:</strong> flexible between 150 and 210 px (about 172 px at full width) with 8 px gaps and a 6 px subfield edge.</li>
+          <li><strong>Phones (under 760 px):</strong> 4 columns. Layers step in 16 px per level to keep the pyramid silhouette, and the card becomes a bottom sheet.</li>
+          <li><strong>Very small phones (under 420 px):</strong> tiles go full width, one per row.</li>
+          <li><strong>Connecting lines:</strong> a dashed amber thread joins events in date order, drawn between the layer fills and the tiles.</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <ol id="print-notes" class="print-only" aria-hidden="true"></ol>
+
+  <div id="grid-overlay" class="grid-overlay" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+</main>
+
+<footer class="wrap site-foot" data-ann="9">
+  <p>Event data lives in <code>data.js</code>. Notes are draft copy standing in for the Tier 3 writing. Dates marked as ranges or eras are shown as written in the course brief.</p>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg">
+    <header class="dlg-head">
+      <div>
+        <p class="dlg-meta"><span id="dlg-year" class="year" data-ann="1"></span> <span id="dlg-layer"></span></p>
+        <h2 id="dlg-title" tabindex="-1" data-ann="2"></h2>
+      </div>
+      <button id="dlg-close" class="btn btn-icon" type="button" aria-label="Close" data-ann="3">&times;</button>
+    </header>
+    <div class="dlg-scroll">
+      <p id="dlg-caveat" class="caveat" hidden></p>
+      <section data-ann="4">
+        <h3>What happened</h3>
+        <p id="dlg-what"></p>
+      </section>
+      <section>
+        <h3>Why it matters</h3>
+        <p id="dlg-why"></p>
+      </section>
+      <section>
+        <h3>Subfield</h3>
+        <p class="subfield"><span class="dot" aria-hidden="true"></span><span id="dlg-sub"></span></p>
+      </section>
+      <section>
+        <h3>Impact on industry and daily life</h3>
+        <p id="dlg-impact"></p>
+      </section>
+      <ol class="ann-key" aria-label="Card annotations">
+        <li><span class="n">1</span>Year and layer, under a stripe in the subfield colour</li>
+        <li><span class="n">2</span>Event title</li>
+        <li><span class="n">3</span>Close button (Escape or a tap outside also closes)</li>
+        <li><span class="n">4</span>Four-part note: what happened, why it matters, subfield, impact</li>
+        <li><span class="n">5</span>Previous and Next (Left and Right arrow keys do the same)</li>
+        <li><span class="n">6</span>Copy link</li>
+      </ol>
+    </div>
+    <footer class="dlg-foot">
+      <button id="prev" class="btn" type="button" data-ann="5">Previous event</button>
+      <span id="dlg-count" class="count"></span>
+      <button id="next" class="btn" type="button">Next event</button>
+      <button id="copy" class="btn btn-quiet" type="button" data-ann="6">Copy link</button>
+      <span id="dlg-status" class="dlg-status" role="status"></span>
+    </footer>
+  </div>
+</dialog>
+
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

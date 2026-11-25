@@ -119,7 +119,7 @@
 
   function renderPyramid() {
     pyramid.textContent = '';
-    layers.forEach(function (layer, i) {
+    shownLayers().forEach(function (layer, i) {
       var li = el('li', 'layer');
       li.setAttribute('data-layer', layer.n);
       li.style.setProperty('--w', layer.width + '%');
@@ -145,7 +145,7 @@
         b.style.setProperty('--accent', accentVar(m.field));
         b.appendChild(el('span', 'e-year', m.year));
         b.appendChild(el('span', 'e-title', m.short));
-        b.appendChild(el('span', 'e-field', m.subfield));
+        b.appendChild(el('span', 'e-field', m.tag || m.subfield));
         b.addEventListener('click', function () { openMilestone(m.id, b); });
         item.appendChild(b);
         ul.appendChild(item);
@@ -160,7 +160,7 @@
 
   function renderLegend() {
     var ol = $('layer-legend');
-    layers.forEach(function (l) {
+    shownLayers().forEach(function (l) {
       var li = el('li');
       li.appendChild(el('strong', null, l.name));
       if (l.blurb) li.appendChild(el('span', null, ': ' + l.blurb));
@@ -278,8 +278,19 @@
     $('dlg-why').textContent = m.why;
     $('dlg-sub').textContent = m.subfield + ' (' + data.fields[m.field] + ')';
     $('dlg-impact').textContent = m.impact;
+    var src = $('dlg-source');
+    src.textContent = '';
+    if (m.source) src.appendChild(document.createTextNode(m.source));
+    if (m.url && /^https?:\/\//.test(m.url)) { // only web links are ever made clickable
+      var a = el('a', null, 'Open the source');
+      a.href = m.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      if (m.source) src.appendChild(document.createTextNode(' '));
+      src.appendChild(a);
+    }
     var cav = $('dlg-caveat');
-    cav.textContent = m.caveat ? 'Note on accuracy: ' + m.caveat : '';
+    cav.textContent = m.caveat ? (data.caveatLabel || 'Note on accuracy: ') + m.caveat : '';
     cav.hidden = !m.caveat;
     dlg.style.setProperty('--accent', accentVar(m.field));
     dlg.querySelector('.subfield .dot').style.setProperty('--accent', accentVar(m.field));
@@ -491,6 +502,31 @@
     });
   }
 
+  // Layers marked optional (the future layer) are drawn only once an event uses them.
+  function shownLayers() {
+    return layers.filter(function (l) {
+      return !l.optional || ordered.some(function (m) { return m.layer === l.n; });
+    });
+  }
+
+  // Wide screens: when a layer needs more than one row, split its tiles evenly (3 + 3 rather than 5 + 1).
+  function balanceRows() {
+    var wide = window.matchMedia ? window.matchMedia('(min-width: 761px)').matches : window.innerWidth > 760;
+    Array.prototype.forEach.call(pyramid.querySelectorAll('.events'), function (ul) {
+      ul.style.maxWidth = '';
+      var n = ul.children.length;
+      if (!wide || n < 2 || ul.querySelector('.none')) return;
+      var tile = 160, gap = 8;
+      var cap = Math.max(1, Math.floor((ul.clientWidth + gap) / (tile + gap)));
+      var rows = Math.ceil(n / cap);
+      if (rows > 1) {
+        var per = Math.ceil(n / rows);
+        ul.style.maxWidth = (per * tile + (per - 1) * gap) + 'px';
+      }
+    });
+  }
+
+  window.addEventListener('resize', balanceRows);
   window.addEventListener('resize', drawThreads);
   if (window.ResizeObserver) new ResizeObserver(drawThreads).observe(threadWrap);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawThreads);
@@ -505,7 +541,7 @@
       tr.appendChild(el('td', null, l.name));
       tr.appendChild(el('td', null, l.width + '%'));
       tr.appendChild(el('td', null, ordered.filter(function (m) { return m.layer === l.n; })
-        .map(function (m) { return parseInt(m.id.slice(1), 10) + ' ' + m.short; }).join('; ') || 'None yet'));
+        .map(function (m) { return parseInt(m.id.slice(1), 10) + ' ' + m.short; }).join('; ') || (l.optional ? 'Optional layer: appears when an event is added' : 'None yet')));
       tb.appendChild(tr);
     });
   }
@@ -532,6 +568,7 @@
   /* ---------- Start ---------- */
 
   renderPyramid();
+  balanceRows();
   renderLegend();
   renderPrintList();
   applyFilters();

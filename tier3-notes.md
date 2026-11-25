@@ -3,21 +3,20 @@
 ### Milestone 1 — 1943: A Logical Calculus of the Ideas Immanent in Nervous Activity
 - **What happened:** Warren McCulloch and Walter Pitts published a paper proposing a mathematical model of how simplified neurons could work using logic and mathematical rules. Their model showed that networks of artificial neurons could perform logical computations.
 - **Why it matters:** This was one of the earliest attempts to connect how the brain works with how machines can process information. It helped lay the groundwork for artificial neural networks, an idea that would later become central to modern AI.
-- **Subfield:** Artificial Neural Networks / Computational Neuroscience.
-- **Impact:** Although the model wasn't directly used in everyday technology at the time, it helped inspire later research into neural networks. That research eventually contributed to technologies such as speech recognition, image recognition, medical image analysis, and AI assistants.
-
+- **Subfield:** Artificial Neural Networks.
+- **Impact:** Although the model wasn't used in everyday technology at the time, its artificial neuron became the basic building block of every neural network. The networks that unlock phones by face, recommend videos, and flag suspicious bank transactions are all built from units descended from this idea.
 
 ### Milestone 2 — 1950: Alan Turing Proposes the Imitation Game
 - **What happened:** Alan Turing published *Computing Machinery and Intelligence*, proposing the imitation game, later widely known as the Turing Test. He suggested evaluating machine intelligence by whether a machine could imitate human conversation convincingly enough to be indistinguishable from a human.
-- **Why it matters:** Turing shifted the discussion of machine intelligence from the abstract question of whether machines could think to a practical way of evaluating their behaviour.
+- **Why it matters:** Turing shifted the discussion of machine intelligence from the abstract question of whether machines could think to a practical way of evaluating their behavior.
 - **Subfield:** AI Foundations / Machine Intelligence.
-- **Impact:** His proposal influenced how researchers and philosophers approached machine intelligence, and the idea remains relevant today in discussions about conversational AI, chatbots, and how we evaluate the capabilities of AI systems.
+- **Impact:** The idea of telling humans and machines apart by their behavior reaches into everyday life: the CAPTCHA puzzles that websites use to block bots stand for "Completely Automated Public Turing test to tell Computers and Humans Apart." It also remains a reference point for judging how human-like today's chatbots are.
 
 ### Milestone 3 — 1956: Dartmouth Summer Research Project on Artificial Intelligence
 - **What happened:** Organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, the Dartmouth proposal (1955) led to a summer workshop in 1956 that helped establish artificial intelligence as a named research field.
 - **Why it matters:** It brought the idea of artificial intelligence into a more organized research effort, giving scientists a shared field in which to explore how machines could simulate aspects of intelligence.
 - **Subfield:** Artificial Intelligence (Field Formation).
-- **Impact:** The workshop helped shape AI as an academic and research discipline, encouraging universities and researchers to pursue AI-related work that eventually contributed to applications in medicine, business, computing, and automation.
+- **Impact:** Its organizers went on to found major AI laboratories at MIT and Stanford, which trained generations of researchers. The name it gave the field is now used for products people meet every day, from voice assistants to bank fraud alerts, and AI is taught as a discipline in universities worldwide.
 
 ### Milestone 4 — 1957: Rosenblatt’s Perceptron
 - **What happened:** Frank Rosenblatt introduced the perceptron, an early trainable model designed for pattern classification. His early Mark I perceptron work began in 1957, while his influential paper describing the model was published in 1958.
@@ -65,25 +64,25 @@
 - **What happened:** David Rumelhart, Geoffrey Hinton, and Ronald Williams published a widely influential paper demonstrating how backpropagation could train multilayer neural networks by propagating error gradients backward through the network.
 - **Why it matters:** Backpropagation gave researchers an effective way to adjust the internal parameters of multilayer networks, making it possible for neural networks to learn more complex patterns and relationships.
 - **Subfield:** Deep Learning / Neural Networks.
-- **Impact:** This breakthrough helped revive neural-network research and contributed to the techniques behind modern AI systems used in speech recognition, image classification, language processing, and other applications.
+- **Impact:** This breakthrough revived neural-network research, and backpropagation is still how almost every modern neural network is trained, including the models behind translation apps, voice assistants, and chatbots.
 
 ### Milestone 12 — 1989: Convolutional Neural Networks Applied to Handwritten Digit Recognition
 - **What happened:** Yann LeCun and collaborators demonstrated gradient-based learning using convolutional neural networks for document and handwritten digit recognition. Their work showed how neural networks could learn features from images to improve recognition.
 - **Why it matters:** It helped establish convolutional neural networks (CNNs) as a powerful approach to computer vision, allowing machines to learn visual patterns rather than relying entirely on manually designed features.
 - **Subfield:** Computer Vision / Deep Learning.
-- **Impact:** This research contributed to technologies such as automated handwriting recognition, document processing, image classification, and later computer vision systems used in healthcare, security, and manufacturing.
+- **Impact:** In the 1990s, systems based on this work were used by banks to read handwritten checks and by postal services to read handwritten zip codes and postcodes. CNNs later became the standard approach behind photo tagging, medical scan analysis, and quality inspection in factories.
 
 ### Milestone 13 — 1997: IBM Deep Blue Defeats World Chess Champion Garry Kasparov
 - **What happened:** IBM's Deep Blue defeated Garry Kasparov in a six-game chess match that concluded in May 1997. The system relied on specialized search techniques, evaluation functions, and high-performance computing to analyze chess positions and select moves.
 - **Why it matters:** It demonstrated that a computer could outperform a reigning world champion in a complex intellectual task, highlighting the strength of specialized AI without implying general intelligence.
 - **Subfield:** Search / Game-Playing AI.
-- **Impact:** Deep Blue attracted worldwide attention to AI and demonstrated the potential of computing systems to tackle complex decision-making problems, influencing public interest in AI and research into computational problem-solving.
+- **Impact:** Deep Blue changed public expectations of what computers could do. Chess engines built on similar search ideas now run on ordinary phones and are used by players at every level to train and analyze games, and the same search-and-evaluate approach is used in scheduling and route-planning software.
 
 ### Milestone 14 — 2006: Deep Belief Nets Renew Interest in Deep Learning
 - **What happened:** Geoffrey Hinton, Simon Osindero, and Yee-Whye Teh published research showing how deeper neural networks could be trained using layer-by-layer unsupervised pretraining. Their approach helped address some of the challenges researchers faced when training deeper networks.
 - **Why it matters:** It helped renew interest in deep learning by demonstrating a promising way to train networks with multiple layers, encouraging further research into deeper neural architectures.
 - **Subfield:** Deep Learning / Neural Networks.
-- **Impact:** This research contributed to the renewed development of deep-learning techniques that later became important in speech recognition, computer vision, language processing, and other AI applications.
+- **Impact:** The deep-learning revival it sparked led quickly to practical results: within a few years, deep neural networks greatly improved speech recognition and were adopted in smartphone voice search and dictation.
 
 ### Milestone 15 — 2009: ImageNet Dataset Introduced
 - **What happened:** Fei-Fei Li's team introduced ImageNet, a large, hierarchically organized image dataset designed to support visual recognition research. It provided researchers with a large collection of images for training, testing, and comparing computer vision models.
@@ -152,7 +151,7 @@
 - **Impact:** This development helped advance AI image-generation tools used for illustration, creative design, advertising concepts, and visual prototyping from text prompts.
 
 ### Milestone 26 — 2022: Stable Diffusion Released Publicly
-- **What happened:** Stable Diffusion was released publicly in 2022, making powerful text-to-image generation accessible beyond a small group of research organizations. It uses latent diffusion, generating images by gradually removing noise within a compressed representation of visual data.
+- **What happened:** Stability AI and the CompVis research group released Stable Diffusion publicly in 2022, making powerful text-to-image generation accessible beyond a small group of research organizations. It uses latent diffusion, generating images by gradually removing noise within a compressed representation of visual data.
 - **Why it matters:** Its public availability allowed developers, researchers, and creative communities to experiment with and build applications around generative image models.
 - **Subfield:** Generative AI / Latent Diffusion.
 - **Impact:** Stable Diffusion helped expand AI-assisted image creation in digital art, graphic design, marketing, and creative software, while encouraging innovation in open generative AI tools.

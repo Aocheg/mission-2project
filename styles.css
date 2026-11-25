@@ -402,3 +402,38 @@ body.threads-on .event, body.threads-on .layer-head { position: relative; z-inde
 @media print {
   .designbar, .ann-panel, .grid-overlay, .threads { display: none !important; }
 }
+
+/* =====================================================================
+   Research edition: 8-step strata scale, fixed desktop tiles, balanced rows, source link
+   ===================================================================== */
+:root { --c-science: #0e7490; }
+:root[data-theme="dark"] { --c-science: #22d3ee; }
+
+.layer[data-layer="1"] { --lbg: #1b2633; --ltx: #f1f5f9; }
+.layer[data-layer="2"] { --lbg: #243b53; --ltx: #f1f5f9; }
+.layer[data-layer="3"] { --lbg: #2d4d6e; --ltx: #ffffff; }
+.layer[data-layer="4"] { --lbg: #385f85; --ltx: #ffffff; }
+.layer[data-layer="5"] { --lbg: #46739d; --ltx: #ffffff; }
+.layer[data-layer="6"] { --lbg: #8ab0d0; --ltx: #0f1b27; }
+.layer[data-layer="7"] { --lbg: #acc8df; --ltx: #0f1b27; }
+.layer[data-layer="8"] { --lbg: #cfe0ee; --ltx: #0f1b27; }
+
+:root[data-view="wire"] .layer[data-layer="1"] { --lbg: #c9c9c9; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="2"] { --lbg: #d1d1d1; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="3"] { --lbg: #d9d9d9; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="4"] { --lbg: #e0e0e0; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="5"] { --lbg: #e7e7e7; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="6"] { --lbg: #eeeeee; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="7"] { --lbg: #f3f3f3; --ltx: #2a2a2a; }
+:root[data-view="wire"] .layer[data-layer="8"] { --lbg: #f8f8f8; --ltx: #2a2a2a; }
+
+.events { margin-inline: auto; }
+.e-title { overflow-wrap: anywhere; }
+
+/* Desktop tiles are a fixed 160 px so every layer reads at the same scale. Rows are balanced by script. */
+@media (min-width: 761px) {
+  .events > li { flex: 0 0 160px; max-width: 160px; }
+}
+
+.dlg-source a { font-weight: 600; }
+.draft-note { margin: 14px 0 0; font-size: 0.85rem; color: var(--muted); max-width: 62ch; }
